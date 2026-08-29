@@ -11,7 +11,7 @@ int find_free_inode(unsigned char *bitmap)
     /* TODO: STUDENT CODE START */
     for (int index = 1; index < TOTAL_INODES; index++) {
         if (!is_bit_set(bitmap, index)) {
-            return index + 1; /* convert bitmap index to inode number */
+            return index + 1; 
         }
     }
     /* TODO: STUDENT CODE END */
@@ -24,7 +24,7 @@ int find_free_data_block(unsigned char *bitmap)
     /* TODO: STUDENT CODE START */
     for (int index = 0; index < DATA_BLOCKS; index++) {
         if (!is_bit_set(bitmap, index)) {
-            return DATA_REGION_BLOCK + index; /* convert to absolute block number */
+            return DATA_REGION_BLOCK + index; 
         }
     }
     /* TODO: STUDENT CODE END */
@@ -142,7 +142,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < required_blocks; i++) {
         unsigned char buffer[BLOCK_SIZE] = {0};
         size_t bytes_read = fread(buffer, 1, BLOCK_SIZE, source);
-        (void)bytes_read; /* remaining bytes in buffer stay zero-filled */
+        (void)bytes_read; 
         fseek(image, (long)allocated_blocks[i] * BLOCK_SIZE, SEEK_SET);
         fwrite(buffer, BLOCK_SIZE, 1, image);
     }
