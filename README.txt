@@ -1,8 +1,8 @@
 CSE 321: Operating Systems - Summer 2026
 Lab Term Project: SimpleFS - Implementation of a Simple File System in C
 
-Group Number: [FILL IN YOUR GROUP NUMBER]
-Student IDs: [FILL IN EACH GROUP MEMBER'S ID]
+Group Number: 07
+Student IDs: 22101475, 22301484
 
 ===============================================================================
 FILES SUBMITTED
@@ -104,12 +104,14 @@ verified with hexdump/xxd, including:
 ===============================================================================
 CONTRIBUTION OF EACH GROUP MEMBER
 ===============================================================================
-[FILL IN — e.g.]
-- <Name 1> (<ID>): simplefs_builder.c implementation, superblock/bitmap
-  testing.
-- <Name 2> (<ID>): simplefs_adder.c allocation logic (TODO 1-6), testing.
-- <Name 3> (<ID>): simplefs_adder.c data copy/inode/directory logic
-  (TODO 7-11), README, final verification with xxd.
+
+- Gourab Krishna Saha (22301484): Full implementation of simplefs_builder.c (superblock,
+  bitmaps, root inode, root directory entries); compilation and testing of
+  image creation.
+
+- Farsin Rahman Nahin (22101475): Full implementation of simplefs_adder.c (inode/data-block
+  allocation, duplicate/size/name checks, file copy, new inode and directory
+  entry creation); README documentation; final verification with xxd.
 
 ===============================================================================
 KNOWN LIMITATIONS / PROBLEMS
